@@ -26,7 +26,6 @@ const StudentRegistrationForm: React.FC = () => {
     });
 
     const [formErrors, setFormErrors] = useState<FormErrors>({});
-    const [submitted, setSubmitted] = useState(false);
 
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -59,7 +58,6 @@ const StudentRegistrationForm: React.FC = () => {
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
             console.log('Form submitted:', formData);
-            setSubmitted(true);
             setFormData({
                 studentName: '',
                 age: '',
@@ -70,7 +68,6 @@ const StudentRegistrationForm: React.FC = () => {
             setFormErrors({});
         } else {
             setFormErrors(errors);
-            setSubmitted(false);
         }
     };
 
