@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-function Footer() {
+import { useNavigate } from "react-router-dom";
+
+const Footer = () => {
     const navigate = useNavigate();
 
     const navigateTo = (page: string) => {
@@ -7,7 +8,7 @@ function Footer() {
     };
 
     return (
-        <footer className="fixed bottom-0 left-0 z-20 w-full bg-white rounded-lg shadow dark:bg-gray-900">
+        <footer className="relative left-0 z-20 w-full bg-white rounded-lg shadow dark:bg-gray-900">
             <div className="w-full mx-auto max-w-full p-4 text-center md:text-left md:flex md:items-center md:justify-between">
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                     © 2023 Iplay . All Rights Reserved.
@@ -44,6 +45,6 @@ function Footer() {
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;
